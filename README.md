@@ -12,8 +12,7 @@ Currently, two official plugins are available:
 1. Clone this repository.
 
    ```bash
-   git clone https://github.com/idr-yous/OpenClassrooms.git
-   cd project_6_kasa
+   git clone https://github.com/idr-yous/project_6_kasa.git
    ```
 
 2. Install dependencies.
