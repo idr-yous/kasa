@@ -15,6 +15,16 @@ export default function Collapse({ title, content }) {
     setHeight(active ? 0 : contentCollapse.current.scrollHeight);
   };
 
+  // check if collapse content is a list
+  const collapseContent = [];
+  if (Array.isArray(content)) {
+    content.map((item, index) =>
+      collapseContent.push(<span key={index}>{item}</span>)
+    );
+  } else {
+    collapseContent.push(content);
+  }
+
   return (
     <div className="collapse-section">
       <button
@@ -33,7 +43,7 @@ export default function Collapse({ title, content }) {
         className="collapse-content"
         style={{ maxHeight: `${height}px` }}
       >
-        <div className="collapse-text">{content}</div>
+        <div className="collapse-text">{collapseContent}</div>
       </div>
     </div>
   );
